@@ -1,0 +1,26 @@
+{
+    "name": "Free Datadog",
+    "version": "1.0.0",
+    "description": "Access Datadog for free",
+    "manifest_version": 3,
+    "author": "Sampurna Chapagain",
+    "background": {
+        "service_worker": "background.js"
+    },
+    "permissions": [
+        "activeTab"
+    ],
+    "host_permissions": [
+        "https://app.datadoghq.com/*"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "https://app.datadoghq.com/*"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ]
+}
